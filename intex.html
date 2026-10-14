@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name — Personal Website</title>
+<meta name="description" content="Personal website: geography, GIS, teaching, fitness and film.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f1f4ee;
+    --ink: #1c2a38;
+    --muted: #55656f;
+    --line: #c9d2c6;
+    --accent: #2457e6;
+    --accent-ink: #ffffff;
+    --head: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #131b22;
+      --ink: #e8eee6;
+      --muted: #9fb0b6;
+      --line: #2c3a45;
+      --accent: #8fb0ff;
+      --accent-ink: #10203f;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.15rem;
+    line-height: 1.65;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+  .page {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 4rem;
+  }
+  nav {
+    position: sticky;
+    top: 3rem;
+    align-self: start;
+    font-family: var(--head);
+    font-weight: 500;
+  }
+  nav ul { list-style: none; margin: 0 0 2rem; padding: 0; }
+  nav li { margin: 0 0 .5rem; }
+  nav a { color: var(--ink); text-decoration: none; border-bottom: 2px solid transparent; }
+  nav a:hover { border-bottom-color: var(--accent); }
+  nav .where { color: var(--muted); font-family: var(--body); font-size: 1rem; }
+
+  h1 {
+    font-family: var(--head);
+    font-weight: 800;
+    font-size: clamp(3.2rem, 11vw, 7.5rem);
+    line-height: .92;
+    letter-spacing: -0.035em;
+    margin: 0 0 1.5rem;
+  }
+  .intro { font-size: 1.45rem; line-height: 1.5; max-width: 34ch; margin: 0 0 3.5rem; }
+
+  section { padding: 2.5rem 0; border-top: 1px solid var(--line); }
+  h2 {
+    font-family: var(--head);
+    font-weight: 800;
+    font-size: 1.7rem;
+    letter-spacing: -0.01em;
+    margin: 0 0 1rem;
+  }
+  p { max-width: 62ch; margin: 0 0 1rem; }
+
+  .projects { list-style: none; padding: 0; margin: 0; }
+  .projects li { padding: 1rem 0; border-bottom: 1px solid var(--line); }
+  .projects li:last-child { border-bottom: 0; }
+  .projects h3 { font-family: var(--head); font-weight: 500; font-size: 1.25rem; margin: 0 0 .25rem; }
+  .projects p { margin: 0; color: var(--muted); }
+
+  .skills { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: 0; }
+  .skills li {
+    font-family: var(--head);
+    font-weight: 500;
+    font-size: .95rem;
+    padding: .25rem .8rem;
+    border: 1.5px solid var(--ink);
+    border-radius: 999px;
+  }
+
+  .button {
+    display: inline-block;
+    font-family: var(--head);
+    font-weight: 800;
+    background: var(--accent);
+    color: var(--accent-ink);
+    padding: .7rem 1.4rem;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  .button:hover { filter: brightness(1.1); }
+  .links { margin-top: 1.25rem; }
+  .links a { margin-right: 1.25rem; }
+  footer { color: var(--muted); font-size: .95rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+
+  @media (max-width: 760px) {
+    .page { grid-template-columns: 1fr; gap: 2rem; padding-top: 1.5rem; }
+    nav { position: static; }
+    nav ul { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-bottom: 1rem; }
+    nav li { margin: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#geography">Geography &amp; Teaching</a></li>
+      <li><a href="#fitness">Fitness &amp; Sports</a></li>
+      <li><a href="#movies">Movies &amp; Music</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="where">Your City, Country</div>
+  </nav>
+
+  <main>
+    <header>
+      <h1>Your Name</h1>
+      <p class="intro">Geography, GIS and teaching. Time in the gym, good films and music.</p>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am interested in geography, the environment and geographic information technology. I study geography, work with learning materials, and I am interested in using GIS to analyze and visualize geographic data.</p>
+    </section>
+
+    <section id="geography">
+      <h2>Geography &amp; Teaching</h2>
+      <p>I teach geography and prepare learning materials for students. I enjoy explaining complex topics in simple language, creating tests, and helping students better understand geographic processes and phenomena.</p>
+      <ul class="skills">
+        <li>Geography</li>
+        <li>GIS</li>
+        <li>Environment</li>
+        <li>Learning materials</li>
+        <li>Tests</li>
+      </ul>
+    </section>
+
+    <section id="fitness">
+      <h2>Fitness &amp; Sports</h2>
+      <p>Sports and strength training are an important part of my life. I train regularly in the gym and I am interested in bodybuilding, strength performance and physical development. For me, training is not only about working on the body, but also about discipline, consistency and overcoming my own limits.</p>
+    </section>
+
+    <section id="movies">
+      <h2>Movies &amp; Music</h2>
+      <p>In my free time I like watching films and series, especially psychological dramas, crime stories and works with complex characters.</p>
+      <ul class="projects">
+        <li>
+          <h3>Favorite films</h3>
+          <p>Fight Club, The Green Mile, Blade Runner 2049</p>
+        </li>
+        <li>
+          <h3>Favorite series</h3>
+          <p>Breaking Bad, Better Call Saul, The Sopranos</p>
+        </li>
+      </ul>
+      <p>I am also interested in music and its atmosphere: how sound and mood can shape the way we experience a moment.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>The best way to reach me is by email.</p>
+      <a class="button" href="mailto:you@example.com">Send me an email</a>
+      <p class="links">
+        <a href="https://github.com/your-username">GitHub</a>
+        <a href="https://www.linkedin.com/in/your-username">LinkedIn</a>
+      </p>
+    </section>
+
+    <footer>
+      © <span id="year">2026</span> Your Name
+    </footer>
+  </main>
+</div>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
